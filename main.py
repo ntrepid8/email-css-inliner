@@ -8,6 +8,8 @@ logger = logging.getLogger(__name__)
 
 
 def main():
+    tornado.options.define(
+        "port", default=8888, help="run on the given port", type=int)
     tornado.options.parse_command_line()
     logger.info('md to html with inline css starting...')
     application = tornado.web.Application(
