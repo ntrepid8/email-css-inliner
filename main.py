@@ -15,9 +15,9 @@ def main():
     application = tornado.web.Application(
         [(r"/", EmailCssInlinerRequestHandler), ],
         debug=False,
-        autoreload=True
+        autoreload=True,
     )
-    application.listen(8888)
+    application.listen(8888, xheaders=True)
     tornado.ioloop.IOLoop.instance().start()
 
 if __name__ == '__main__':
