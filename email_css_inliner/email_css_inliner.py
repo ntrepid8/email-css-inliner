@@ -58,8 +58,14 @@ class EmailCssInlinerRequestHandler(RequestHandler):
 
     <div><p>
     <em>You can also POST directly to http://inliner.maasive.net/ with your markdown text
-    in the "text" field of the form to use the Bootstrap Inliner as a web-service.
+    in the "text" field of the form to use the Bootstrap Inliner as a web-service.  Please
+    note that you are rate limited to 1 request per second and will be served a 503 if
+    that limit is exceeded.
     </p></div>
+
+    <div>
+    <p><a href="https://github.com/ntrepid8/email-css-inliner">Fork me on GitHub!</a></p>
+    </div>
 
     <div>
     <p>The MIT License (MIT)</p>
