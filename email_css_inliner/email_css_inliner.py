@@ -34,6 +34,11 @@ class EmailCssInlinerRequestHandler(RequestHandler):
 <strong style="font-weight:bold">Markdown:</strong> <a href="https://pypi.python.org/pypi/Markdown" style="background:transparent; color:#428bca; text-decoration:none">https://pypi.python.org/pypi/Markdown</a>
 </li>
 </ul>
+<h2 style='color:inherit; font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; font-size:30px; font-weight:500; line-height:1.1; margin-bottom:10px; margin-top:20px'>An Example with Python <a href="http://docs.python-requests.org/en/latest/" style="background:transparent; color:#428bca; text-decoration:none">Requests</a>
+</h2>
+<pre style='background-color:#f5f5f5; border:1px solid #ccc; border-radius:4px; color:#333; display:block; font-family:Menlo, Monaco, Consolas, "Courier New", monospace; font-size:13px; line-height:1.428571; margin:0 0 10px; padding:9px; white-space:pre-wrap' bgcolor="#f5f5f5"><code style='background-color:transparent; border-radius:0; color:inherit; font-family:Menlo, Monaco, Consolas, "Courier New", monospace; font-size:inherit; padding:0; white-space:pre-wrap' bgcolor="transparent">import requests
+html_content = requests.post('http://inliner.maasive.net/',data={'text':'**some markdown!**'}).text
+</code></pre>
 <p style="margin:0 0 10px"><em>You can also POST directly to http://inliner.maasive.net/ with your markdown text in the "text" field of the form to use the Bootstrap Inliner as a web-service. Please note that you are rate limited to 1 request per second and will be served a 503 if that limit is exceeded.</em></p>
 <p style="margin:0 0 10px"><a href="https://github.com/ntrepid8/email-css-inliner" style="background:transparent; color:#428bca; text-decoration:none">Fork me on GitHub!</a></p>
 <div style="background-color:#f5f5f5; border:1px solid #e3e3e3; border-radius:3px; box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.05); margin-bottom:20px; min-height:20px; padding:9px" bgcolor="#f5f5f5">
