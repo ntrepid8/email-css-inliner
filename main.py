@@ -14,7 +14,7 @@ def main():
     logger.info('md to html with inline css starting...')
     application = tornado.web.Application(
         [(r"/", EmailCssInlinerRequestHandler), ],
-        debug=True,
+        debug=False,
         autoreload=True
     )
     application.listen(8888)
