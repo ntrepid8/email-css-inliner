@@ -23,7 +23,6 @@ class EmailCssInlinerRequestHandler(RequestHandler):
             md_to_html(self.request.body.decode('utf-8')),
             '</div>'
         ])
-        logging.info(md_one)
         html_text = inline_css(md_one)
         self.write(html_text)
 
