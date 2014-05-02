@@ -3,6 +3,7 @@ from tornado.web import RequestHandler
 from premailer import Premailer
 import markdown
 import os
+from utils import cors_support
 
 bootstrap_path = os.path.abspath(
     os.path.join(
@@ -23,9 +24,15 @@ with open(index_path, 'r') as f:
 
 class EmailCssInlinerRequestHandler(RequestHandler):
 
+    @cors_support
+    def options(self, *args, **kwargs):
+        self.write('hello OPTIONS')
+
+    @cors_support
     def get(self, *args, **kwargs):
         self.write(index_html)
 
+    @cors_support
     def post(self, *args, **kwargs):
         md_raw = self.get_argument('text')
         md_one = ''.join([
